@@ -1,0 +1,50 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.slabs-container {
+    display: flex;
+    flex-direction: column;
+    background-image:  url(login.jpg); background-repeat:no-repeat;background-size: 100% 100%;
+}
+
+.slab {
+    display: flex;
+    margin: 20px;
+    width: 300px;
+    background-color: rgb(108, 101, 101);
+}
+
+img {
+    max-width: 150px;
+    height: auto;
+}
+
+.review-rating {
+    margin-left: 20px;
+}
+
+textarea {
+    
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.rating-stars {
+    display: flex;
+}
+
+.star {
+    font-size: 24px;
+    color: gold;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.star:hover,
+.star.active {
+    color: orange;
+}

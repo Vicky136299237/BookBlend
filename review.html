@@ -1,0 +1,199 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .review-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-form label {
+            margin-bottom: 8px;
+        }
+
+        .review-form input,
+        .review-form textarea {
+            margin-bottom: 16px;
+            padding: 8px;
+        }
+
+        .review-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .reviews {
+            margin-top: 20px;
+        }
+
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .rating {
+            color: #f39c12; /* Golden yellow color for stars */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Book Review Page</h1>
+    </header>
+
+    <main>
+        <div class="review-form">
+            <h2>Add a Review</h2>
+            <label for="bookTitle">Book Title:</label>
+            <input type="text" id="bookTitle" required>
+
+            <label for="reviewText">Review:</label>
+            <textarea id="reviewText" rows="4" required></textarea>
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" min="1" max="5" required>
+
+            <button onclick="submitReview()">Submit Review</button>
+        </div>
+
+        <div class="reviews">
+            <h2>Book Reviews</h2>
+            <div id="reviewList"></div>
+        </div>
+    </main>
+
+    <script>
+        function submitReview() {
+            const bookTitle = document.getElementById('bookTitle').value;
+            const reviewText = document.getElementById('reviewText').value;
+            const rating = document.getElementById('rating').value;
+
+            const reviewList = document.getElementById('reviewList');
+
+            const reviewDiv = document.createElement('div');
+            reviewDiv.classList.add('review');
+
+            const titlePara = document.createElement('p');
+            titlePara.innerHTML = `<strong>${bookTitle}</strong>`;
+
+            const ratingPara = document.createElement('p');
+            ratingPara.classList.add('rating');
+            ratingPara.innerHTML = `Rating: ${rating}/5`;
+
+            const reviewPara = document.createElement('p');
+            reviewPara.textContent = reviewText;
+
+            reviewDiv.appendChild(titlePara);
+            reviewDiv.appendChild(ratingPara);
+            reviewDiv.appendChild(reviewPara);
+
+            reviewList.appendChild(reviewDiv);
+
+            // Clear the form fields
+            document.getElementById('bookTitle').value = '';
+            document.getElementById('reviewText').value = '';
+            document.getElementById('rating').value = '';
+        }
+    </script>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review and Rating Page</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <div class="slabs-container">
+        <!-- Example Slab 1 -->
+        <div class="slab">
+            <img src="the fragile thred of power.jpeg" alt="Book 1">
+            <div class="review-rating">
+                <textarea placeholder="Write your review..."></textarea>
+                <div class="rating-stars" data-rating="0">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </div>
+        <div class="slab">
+            <img src="the fragile thred of power.jpeg" alt="Book 1">
+            <div class="review-rating">
+                <textarea placeholder="Write your review..."></textarea>
+                <div class="rating-stars" data-rating="0">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </div>
+        <div class="slab">
+            <img src="the fragile thred of power.jpeg" alt="Book 1">
+            <div class="review-rating">
+                <textarea placeholder="Write your review..."></textarea>
+                <div class="rating-stars" data-rating="0">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </div>
+        <div class="slab">
+            <img src="the fragile thred of power.jpeg" alt="Book 1">
+            <div class="review-rating">
+                <textarea placeholder="Write your review..."></textarea>
+                <div class="rating-stars" data-rating="0">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more slabs for other books -->
+
+    </div>
+
+    <script src="review.js"></script>
+</body>
+</html>
+
